@@ -1,9 +1,11 @@
-// Reference Board        
+// Reference Board (By Ibrahim)       
 // This is used by the user as a reference so that they can make their moves
-String [] test = {"-1-2-3-4\n5-6-7-8-\n-9-10-11-12\n13-14-15-16-\n-17-18-19-20\n21-22-23-24-\n-25-26-27-28\n29-30-31-32-"};
-        System.out.println(Arrays.deepToString(test).replaceAll("(^\\[|\\]$)", ""));
+ String [] referenceBoard = {" -","01","-","02","-","03","-","04\n","05","-","06","-","07","-","08","-\n","-","09","-","10","-","11","-","12\n","13","-","14","-","15","-","16","-\n","-","17","-","18","-","19","-","20\n","21","-","22","-","23","-","24","-"};
+        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
+        System.out.println(removingExtras);
+//
 
-// Plain Board
+// Plain Board (By Akshita)
 // This is a plain board, It is used so that we can create a randomized and a new game board on top of it.
 String [][] board = new String [8][8];
   for (int row = 0; row < 8; row++)
@@ -21,3 +23,10 @@ String [][] board = new String [8][8];
     }
     System.out.println(); 
   }
+//
+
+// Plain Board V2 (By Ibrahim)
+// This is a different way of making the Plain Board
+String [] referenceBoard = {" -",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-"};
+        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
+        System.out.println(removingExtras);
