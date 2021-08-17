@@ -20,8 +20,6 @@ String [][] board = new String [8][8];
       System.out.print(board[row][column] + " ")
     }
     System.out.println();
-          
-          System.out.println("yessir");
-          System.out.println("yessir");
+       
   }
 //
