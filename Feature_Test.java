@@ -19,9 +19,5 @@ String [][] board = new String [8][8];
     {
       System.out.print(board[row][column] + " ")
     }
-    System.out.println();
-    System.out.println("hey");
-    System.out.println("yo");      //Akshi here
-       
+    System.out.println(); 
   }
-//
