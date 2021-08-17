@@ -21,6 +21,7 @@ String [][] board = new String [8][8];
     }
     System.out.println();
     System.out.println("hey");
+    System.out.println("yo");      
        
   }
 //
