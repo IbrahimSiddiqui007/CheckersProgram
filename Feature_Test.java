@@ -81,38 +81,69 @@ String [][] board = new String [8][8];
   }
 //
 
-// Plain Board V2 (By Ibrahim)
-// This is a different way of making the Plain Board
-String [] referenceBoard = {" -",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-"};
-        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
-        System.out.println(removingExtras);
+// Randomized board (By Ibrahim)
+// This is a board that going to be used for the Randomized board option. It uses the original 2d Array 
 
-// Randomized board v2 (By Ibrahim)
-// This is a board that going to be used for the Randomized board option
- String [] plainBoard = {" -",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-",""};
-       String removingExtras = (Arrays.toString(plainBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
-       int smallWhiteRandom = (int) (Math.random()*9);
+        ThreadLocalRandom random = ThreadLocalRandom.current();
 
-        for (int i = 0; i < smallWhiteRandom; i++)
+        int row;
+        int column;
+        int randomRow = (int)(Math.random()*8);
+        int randomColumn = (int)(Math.random()*8);
+
+        String [][] board = new String [8][8];
+        for (row = 0; row < 8; row++)
         {
-            int smallWhitePosition = (int) (Math.random()*65);
-            if (plainBoard[smallWhitePosition].equals("."))
+            for (column = 0; column < 8; column++)
             {
-                plainBoard[smallWhitePosition] = "w";
-            }
-            else if (plainBoard[smallWhitePosition].equals("-"))
-            {
-                    plainBoard[smallWhitePosition+1] = "w";
-            }
-            else if (plainBoard[smallWhitePosition].contains("-") && (smallWhitePosition == 15 || smallWhitePosition == 31 || smallWhitePosition == 47 || smallWhitePosition == 63))
-            {
-                plainBoard[smallWhitePosition+1] = "w\n";
-            }
-            else if (plainBoard[smallWhitePosition].contains(".") && (smallWhitePosition == 7 || smallWhitePosition == 23 || smallWhitePosition == 39 || smallWhitePosition == 55))
-            {
-                plainBoard[smallWhitePosition] = "w\n";
+                board[row][column] = (row + column) % 2 ==0 ? "-" : ".";
             }
         }
-        String removingExtras = (Arrays.toString(plainBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
-        System.out.println(removingExtras);
+
+        for (int i = 0; i < 8; i++)
+        {
+                randomRow = random.nextInt(1, 6);
+                randomColumn = (int)(Math.random()*8);
+                if (board[randomRow][randomColumn].equals("."))
+                {
+                    board[randomRow][randomColumn] = "w";
+                }
+        }
+
+        for (int i = 0; i < 8; i++)
+        {
+                randomRow = random.nextInt(1, 6);
+                randomColumn = (int)(Math.random()*8);
+                if (board[randomRow][randomColumn].equals("."))
+                {
+                    board[randomRow][randomColumn] = "b";
+                }
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            randomRow = random.nextInt(0, 6);
+            randomColumn = (int)(Math.random()*8);
+            if (board[randomRow][randomColumn].equals("."))
+            {
+                board[randomRow][randomColumn] = "W";
+            }
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            randomRow = random.nextInt(1, 7);
+            randomColumn = (int)(Math.random()*8);
+            if (board[randomRow][randomColumn].equals("."))
+            {
+                board[randomRow][randomColumn] = "B";
+            }
+        }
+        for (row = 0; row < 8; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                System.out.print(board[row][column] + " ");
+            }
+            System.out.println();
+        }
 //
