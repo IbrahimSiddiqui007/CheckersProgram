@@ -2,56 +2,51 @@
 //Within the main method we have added a switch statment with the options the usercan choose from
 import java.util.Scanner;
 
-public class  Main {
-
-	public static void main(String[] args) 
+public class  Main 
+{
+	
+	public static void main(String[] args)
 	{
-		
-		Scanner input = new Scanner(System.in); 
-    String option; 
-    String randomgame;
-    String playagain;
+		Scanner input = new Scanner(System.in);
+		String option;
 
-    System.out.println("Welcome \n"); 
+		System.out.println("Welcome to the Program \n");
 
-    System.out.println("Please select how you would like the game to start: \n");
-    
-    System.out.println("Enter 1 to start a 'New Game'\nEnter 2 to play a 'Randomized Game' \n");
-    option = input.nextLine();
-  
-   switch (option)
-   {
-     case "1": 
-     {
-     System.out.println("Your New Game will start now"); 
-     break;
-     }
+		System.out.println("Please enter the appropriate number for the option that you want to select: \n" +
+			"1 : Start a new Game \n" +
+			"2 : Start a randomized game \n" +
+			"3 : quit the program \n");
+		option = input.nextLine();
 
-     case "2":
-     {
-     System.out.println("Enter A to resume a midway game\nEnter B to resume a midway finished game\n");
-     randomgame = input.nextLine();
-     
-     }
-     //This is a another switch statemnet added into the original one, for the user to select what randomized game they would like to choose
-        switch (randomgame)
-   {
-     case "A": 
-     {
-       System.out.println("Your mid game will start now");
-       break;
-     }
-     case "B": 
-     {
-       System.out.println("Your mid end game will start now");
-       break;
-     }
-   }
-    
-     }
-   }
-   
-  }
+		switch (option)
+		{
+		    case "1":
+		    {
+			System.out.println("You have chosen to start a New Game");
+			System.out.println("Your New Game will start now \n");
+			break;
+		    }
+
+		    case "2":
+		    {
+			System.out.println("You have chosen to start a Randomized Game");
+			System.out.println("Your Randomized Game will start now \n");
+			randomizedBoard();
+			break;
+		    }
+		    case "3":
+		    {
+			System.out.println("You have chosen to Quit the Program");
+			break;
+		    }
+		    default:
+		    {
+			System.out.println("Sorry you have chosen an option that does not exist");
+			break;
+		    }
+		}
+	}
+}
 //
 
 // Reference Board (By Ibrahim)       
@@ -84,10 +79,12 @@ String [][] board = new String [8][8];
 // Randomized board (By Ibrahim)
 // This is a board that going to be used for the Randomized board option. It uses the original 2d Array 
 
+public static void randomizedBoard()
+    {
         ThreadLocalRandom random = ThreadLocalRandom.current();
-
-        int row;
-        int column;
+	
+	int row;
+	int column;
         int randomRow = (int)(Math.random()*8);
         int randomColumn = (int)(Math.random()*8);
 
@@ -102,22 +99,22 @@ String [][] board = new String [8][8];
 
         for (int i = 0; i < 8; i++)
         {
-                randomRow = random.nextInt(1, 6);
-                randomColumn = (int)(Math.random()*8);
-                if (board[randomRow][randomColumn].equals("."))
-                {
-                    board[randomRow][randomColumn] = "w";
-                }
+            randomRow = random.nextInt(1, 6);
+            randomColumn = (int)(Math.random()*8);
+            if (board[randomRow][randomColumn].equals("."))
+            {
+                board[randomRow][randomColumn] = "w";
+            }
         }
 
         for (int i = 0; i < 8; i++)
         {
-                randomRow = random.nextInt(1, 6);
-                randomColumn = (int)(Math.random()*8);
-                if (board[randomRow][randomColumn].equals("."))
-                {
-                    board[randomRow][randomColumn] = "b";
-                }
+            randomRow = random.nextInt(1, 6);
+            randomColumn = (int)(Math.random()*8);
+            if (board[randomRow][randomColumn].equals("."))
+            {
+                board[randomRow][randomColumn] = "b";
+            }
         }
 
         for (int i = 0; i < 4; i++)
@@ -146,4 +143,5 @@ String [][] board = new String [8][8];
             }
             System.out.println();
         }
+    }
 //
