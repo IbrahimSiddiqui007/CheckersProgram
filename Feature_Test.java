@@ -86,3 +86,33 @@ String [][] board = new String [8][8];
 String [] referenceBoard = {" -",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-"};
         String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
         System.out.println(removingExtras);
+
+// Randomized board v2 (By Ibrahim)
+// This is a board that going to be used for the Randomized board option
+ String [] plainBoard = {" -",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-\n","-",".","-",".","-",".","-",".\n",".","-",".","-",".","-",".","-",""};
+       String removingExtras = (Arrays.toString(plainBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
+       int smallWhiteRandom = (int) (Math.random()*9);
+
+        for (int i = 0; i < smallWhiteRandom; i++)
+        {
+            int smallWhitePosition = (int) (Math.random()*65);
+            if (plainBoard[smallWhitePosition].equals("."))
+            {
+                plainBoard[smallWhitePosition] = "w";
+            }
+            else if (plainBoard[smallWhitePosition].equals("-"))
+            {
+                    plainBoard[smallWhitePosition+1] = "w";
+            }
+            else if (plainBoard[smallWhitePosition].contains("-") && (smallWhitePosition == 15 || smallWhitePosition == 31 || smallWhitePosition == 47 || smallWhitePosition == 63))
+            {
+                plainBoard[smallWhitePosition+1] = "w\n";
+            }
+            else if (plainBoard[smallWhitePosition].contains(".") && (smallWhitePosition == 7 || smallWhitePosition == 23 || smallWhitePosition == 39 || smallWhitePosition == 55))
+            {
+                plainBoard[smallWhitePosition] = "w\n";
+            }
+        }
+        String removingExtras = (Arrays.toString(plainBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
+        System.out.println(removingExtras);
+//
