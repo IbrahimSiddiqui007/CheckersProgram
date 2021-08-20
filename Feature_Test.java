@@ -6,46 +6,103 @@ public class  Main
 {
 	
 	public static void main(String[] args)
-	{
-		Scanner input = new Scanner(System.in);
-		String option;
+    {
+        Scanner input = new Scanner(System.in);
 
-		System.out.println("Welcome to the Program \n");
 
-		System.out.println("Please enter the appropriate number for the option that you want to select: \n" +
-			"1 : Start a new Game \n" +
-			"2 : Start a randomized game \n" +
-			"3 : quit the program \n");
-		option = input.nextLine();
+        System.out.println("Welcome to the Program \n");
 
-		switch (option)
-		{
-		    case "1":
-		    {
-			System.out.println("You have chosen to start a New Game");
-			System.out.println("Your New Game will start now \n");
-			break;
-		    }
+        System.out.println("Please enter the appropriate number for the option that you want to select: \n" +
+                "1 : Start a new Game \n" +
+                "2 : Start a randomized game \n" +
+                "3 : quit the program");
+        String option = input.nextLine();
 
-		    case "2":
-		    {
-			System.out.println("You have chosen to start a Randomized Game");
-			System.out.println("Your Randomized Game will start now \n");
-			randomizedBoard();
-			break;
-		    }
-		    case "3":
-		    {
-			System.out.println("You have chosen to Quit the Program");
-			break;
-		    }
-		    default:
-		    {
-			System.out.println("Sorry you have chosen an option that does not exist");
-			break;
-		    }
-		}
-	}
+        switch (option)
+        {
+            case "1":
+            {
+                System.out.println("You have chosen to start a New Game");
+                System.out.println("Your New Game will start now \n");
+
+                System.out.println("Please enter the color of the pieces that you would like to play with: \n" +
+                        "B : Black pieces \n" +
+                        "W : White pieces");
+                String userColor = input.nextLine();
+
+                String toLowerCase = userColor.toLowerCase();
+
+                if (userColor.equals("B") || userColor.equals("b") || userColor.equals("W") || userColor.equals("w") || toLowerCase.contains("White") || toLowerCase.contains("Black"))
+                {
+                    System.out.println(userColor);
+                    break;
+                }
+                else
+                {
+                    System.out.println("Sorry you have chosen a color that does not exist");
+                    break;
+                }
+            }
+
+            case "2":
+            {
+                System.out.println("You have chosen to start a Randomized Game");
+                System.out.println("Your Randomized Game will start now \n");
+
+                System.out.println("Please enter the color of the pieces that you would like to play with: \n" +
+                        "B : Black pieces \n" +
+                        "W : White pieces");
+                String userColor = input.nextLine();
+
+                if (userColor.equals("B") || userColor.equals("b") || userColor.equals("W") || userColor.equals("w") || userColor.contains("White") || userColor.contains("Black") || userColor.contains("white") || userColor.contains("black"))
+                {
+                   /* System.out.println("Would you like a reference board: \n" +
+                            "Y : Yes \n" +
+                            "N : No");
+                    String refBoardChoice = input.nextLine();
+
+                    if (refBoardChoice.contains("Y") || refBoardChoice.contains("y"))
+                    {
+                        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
+                        System.out.println("You will continue with the game with a reference board");
+                        System.out.println(removingExtras);
+                        System.out.println("\n");
+                    }
+                    else if (refBoardChoice.contains("N") || refBoardChoice.contains("n"))
+                    {
+                        System.out.println("You will continue with the game without a reference board");
+                    }
+                    */
+                    System.out.println("How many moves would you like to make in total ?");
+                    int movesTotal = input.nextInt();
+
+                    for (int i = 0; i < movesTotal; i++)
+                    {
+                        System.out.println("Please enter your move: ");
+                        String move = input.nextLine();
+
+                    }
+                    randomizedBoard();
+                    break;
+                }
+                else
+                {
+                    System.out.println("Sorry you have chosen a color that does not exist");
+                    break;
+                }
+            }
+            case "3":
+            {
+                System.out.println("You have chosen to Quit the Program");
+                break;
+            }
+            default:
+            {
+                System.out.println("Sorry you have chosen an option that does not exist");
+                break;
+            }
+        }
+    }
 }
 //
 
