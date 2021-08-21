@@ -208,7 +208,6 @@ public static void randomizedBoard()
 // This is the main program with everything that we have done up until now
 package checkerProgram;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -222,15 +221,25 @@ public class Feature_Test {
     public static void finalRandomBoard()
     {
         System.out.println("This the board before doing any moves");
-        randomizedBoard(board);
+        String [][] randomBoard = randomizedBoard();
+
+        System.out.println("\n");
+        for (row = 0; row < 8; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                System.out.print(randomBoard[row][column] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void finalPlainBoard()
     {
         System.out.println("This the board before doing any moves");
-        plainBoard(board);
+        String [][] plainBoard = plainBoard();
     }
-    public static void plainBoard(String [][] board)
+    public static String[][] plainBoard()
     {
         System.out.println("");
         for (row = 1; row < 3; row++)
@@ -274,9 +283,10 @@ public class Feature_Test {
             }
             System.out.println();
         }
+        return board;
     }
 
-    public static void randomizedBoard(String [][] board)
+    public static String[][] randomizedBoard()
     {
         ThreadLocalRandom random = ThreadLocalRandom.current();
 
@@ -330,6 +340,7 @@ public class Feature_Test {
             }
             System.out.println();
         }
+        return board;
     }
 
     public static void main(String[] args)
@@ -391,13 +402,13 @@ public class Feature_Test {
                         {
                             System.out.println("You have chosen to make a standard move");
                             System.out.println("This the board before doing any moves");
-                            plainBoard(board);
+                            finalPlainBoard();
                         }
                         else if (move.contains("x"))
                         {
                             System.out.println("You have chosen to make a jump move");
                             System.out.println("This the board before doing any moves");
-                            plainBoard(board);
+                            finalPlainBoard();
                         }
                     }
                     break;
@@ -451,7 +462,6 @@ public class Feature_Test {
                         if (move.contains("-"))
                         {
                             System.out.println("You have chosen to make a standard move");
-                            System.out.println("This the board before doing any moves");
                             finalRandomBoard();
                             break;
                         }
@@ -484,4 +494,7 @@ public class Feature_Test {
         }
     }
 }
+
+
+
 //
