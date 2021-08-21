@@ -217,14 +217,63 @@ public class Feature_Test {
     public static int column;
     public static int randomRow;
     public static int randomColumn;
-    public static String move;
     public static String [][] board = new String[8][8];
 
-    public static void workedBoard()
+    public static void finalRandomBoard()
     {
-        System.out.println("This the board before doing any moves ");
+        System.out.println("This the board before doing any moves");
         randomizedBoard(board);
+    }
 
+    public static void finalPlainBoard()
+    {
+        System.out.println("This the board before doing any moves");
+        plainBoard(board);
+    }
+    public static void plainBoard(String [][] board)
+    {
+        System.out.println("");
+        for (row = 1; row < 3; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                board[row][column] = (row + column) % 2 == 0 ? "-" : "w";
+            }
+        }
+        for (row = 3; row <5; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                board[row][column] = (row + column) % 2 == 0 ? "-" : ".";
+            }
+        }
+        for (row = 5; row <7; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                board[row][column] = (row + column) % 2 == 0 ? "-" : "b";
+            }
+        }
+        for (row = 7; row <=7; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                board[row][column] = (row + column) % 2 == 0 ? "-" : "B";
+            }
+        }
+        for (row = 0; row <=0; row++)
+        {
+            for (column = 0; column < 8; column++)
+            {
+                board[row][column] = (row + column) % 2 == 0 ? "-" : "W";
+            }
+        }
+        for (row = 0; row < 8; row++) {
+            for (column = 0; column < 8; column++) {
+                System.out.print(board[row][column] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void randomizedBoard(String [][] board)
@@ -246,49 +295,37 @@ public class Feature_Test {
         {
             randomRow = random.nextInt(1, 6);
             randomColumn = (int) (Math.random() * 8);
-		
             if (board[randomRow][randomColumn].equals("."))
             {
                 board[randomRow][randomColumn] = "w";
             }
         }
 
-        for (int i = 0; i < 8; i++) 
-	{
+        for (int i = 0; i < 8; i++) {
             randomRow = random.nextInt(1, 6);
             randomColumn = (int) (Math.random() * 8);
-		
-            if (board[randomRow][randomColumn].equals(".")) 
-	    {
+            if (board[randomRow][randomColumn].equals(".")) {
                 board[randomRow][randomColumn] = "b";
             }
         }
 
-        for (int i = 0; i < 4; i++) 
-	{
+        for (int i = 0; i < 4; i++) {
             randomRow = random.nextInt(0, 6);
             randomColumn = (int) (Math.random() * 8);
-		
-            if (board[randomRow][randomColumn].equals(".")) 
-	    {
+            if (board[randomRow][randomColumn].equals(".")) {
                 board[randomRow][randomColumn] = "W";
             }
         }
-        for (int i = 0; i < 4; i++) 
-	{
+        for (int i = 0; i < 4; i++) {
             randomRow = random.nextInt(1, 7);
             randomColumn = (int) (Math.random() * 8);
-		
-            if (board[randomRow][randomColumn].equals(".")) 
-	    {
+            if (board[randomRow][randomColumn].equals(".")) {
                 board[randomRow][randomColumn] = "B";
             }
         }
 
-        for (row = 0; row < 8; row++) 
-	{
-            for (column = 0; column < 8; column++) 
-	    {
+        for (row = 0; row < 8; row++) {
+            for (column = 0; column < 8; column++) {
                 System.out.print(board[row][column] + " ");
             }
             System.out.println();
@@ -322,25 +359,45 @@ public class Feature_Test {
 
                 String toLowerCase = userColor.toLowerCase();
 
-                if (userColor.equals("B") || userColor.equals("b") || userColor.equals("W") || userColor.equals("w") || toLowerCase.contains("White") || toLowerCase.contains("Black"))
+                if (userColor.equals("B") || userColor.equals("b") || userColor.equals("W") || userColor.equals("w") || userColor.contains("White") || userColor.contains("Black") || userColor.contains("white") || userColor.contains("black"))
                 {
+                   /* System.out.println("Would you like a reference board: \n" +
+                            "Y : Yes \n" +
+                            "N : No");
+                    String refBoardChoice = input.nextLine();
+
+                    if (refBoardChoice.contains("Y") || refBoardChoice.contains("y"))
+                    {
+                        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
+                        System.out.println("You will continue with the game with a reference board");
+                        System.out.println(removingExtras);
+                        System.out.println("\n");
+                    }
+                    else if (refBoardChoice.contains("N") || refBoardChoice.contains("n"))
+                    {
+                        System.out.println("You will continue with the game without a reference board");
+                    }
+                    */
                     System.out.println("How many moves would you like to make in total ?");
                     int movesTotal = input.nextInt();
 
                     for (int i = 0; i < movesTotal; i++)
                     {
+                        input = new Scanner(System.in);
                         System.out.println("Please enter your move: ");
-                        move = input.nextLine();
+                        String move = input.nextLine();
 
                         if (move.contains("-"))
                         {
                             System.out.println("You have chosen to make a standard move");
-                            workedBoard();
+                            System.out.println("This the board before doing any moves");
+                            plainBoard(board);
                         }
                         else if (move.contains("x"))
                         {
                             System.out.println("You have chosen to make a jump move");
-
+                            System.out.println("This the board before doing any moves");
+                            plainBoard(board);
                         }
                     }
                     break;
@@ -354,6 +411,7 @@ public class Feature_Test {
 
             case "2":
             {
+
                 System.out.println("You have chosen to start a Randomized Game");
                 System.out.println("Your Randomized Game will start now \n");
 
@@ -386,21 +444,26 @@ public class Feature_Test {
 
                     for (int i = 0; i < movesTotal; i++)
                     {
+                        input = new Scanner(System.in);
                         System.out.println("Please enter your move: ");
-                        move = input.nextLine();
+                        String move = input.nextLine();
 
                         if (move.contains("-"))
                         {
                             System.out.println("You have chosen to make a standard move");
-                            workedBoard();
+                            System.out.println("This the board before doing any moves");
+                            finalRandomBoard();
+                            break;
                         }
                         else if (move.contains("x"))
                         {
                             System.out.println("You have chosen to make a jump move");
-
+                            System.out.println("This the board before doing any moves");
+                            finalRandomBoard();
+                            break;
                         }
                     }
-                    break;
+
                 }
                 else
                 {
