@@ -52,6 +52,7 @@ public class Feature_Test {
                 randomBoard[0][3] = temp;
             }
         }
+        
         if (originalLocation.equals("3"))
         {
             if (endLocation.equals("7"))
@@ -118,6 +119,7 @@ public class Feature_Test {
                 randomBoard[1][2] = temp;
             }
         }
+        
         if (originalLocation.equals("7"))
         {
             if (endLocation.equals("10"))
@@ -173,6 +175,7 @@ public class Feature_Test {
                 randomBoard[1][6] = temp;
             }
         }
+        
         if (originalLocation.equals("9"))
         {
             if (endLocation.equals("13"))
@@ -228,6 +231,7 @@ public class Feature_Test {
                 randomBoard[2][3] = temp;
             }
         }
+        
         if (originalLocation.equals("11"))
         {
             if (endLocation.equals("15"))
@@ -315,6 +319,7 @@ public class Feature_Test {
                 randomBoard[3][2] = temp;
             }
         }
+        
         if (originalLocation.equals("15"))
         {
             if (endLocation.equals("18"))
@@ -426,6 +431,7 @@ public class Feature_Test {
                 randomBoard[4][3] = temp;
             }
         }
+        
         if (originalLocation.equals("19"))
         {
             if (endLocation.equals("15"))
@@ -440,13 +446,13 @@ public class Feature_Test {
                 randomBoard[3][6] = randomBoard[4][5];
                 randomBoard[4][5] = temp;
             }
-            else if (endLocation.equals("7"))
+            else if (endLocation.equals("23"))
             {
                 temp = randomBoard[5][4];
                 randomBoard[5][4] = randomBoard[4][5];
                 randomBoard[4][5] = temp;
             }
-            else if (endLocation.equals("8"))
+            else if (endLocation.equals("24"))
             {
                 temp = randomBoard[5][6];
                 randomBoard[5][6] = randomBoard[4][5];
@@ -462,7 +468,7 @@ public class Feature_Test {
                 randomBoard[3][6] = randomBoard[4][7];
                 randomBoard[4][7] = temp;
             }
-            else if (endLocation.equals("8"))
+            else if (endLocation.equals("24"))
             {
                 temp = randomBoard[5][6];
                 randomBoard[5][6] = randomBoard[4][7];
@@ -478,15 +484,252 @@ public class Feature_Test {
                 randomBoard[4][1] = randomBoard[5][0];
                 randomBoard[5][0] = temp;
             }
-            else if (endLocation.equals("1"))
+            else if (endLocation.equals("25"))
             {
-                temp = randomBoard[0][1];
-                randomBoard[0][1] = randomBoard[1][0];
-                randomBoard[1][0] = temp;
+                temp = randomBoard[6][1];
+                randomBoard[6][1] = randomBoard[5][0];
+                randomBoard[5][0] = temp;
             }
         }
 
+        if (originalLocation.equals("22"))
+        {
+            if (endLocation.equals("17"))
+            {
+                temp = randomBoard[4][1];
+                randomBoard[4][1] = randomBoard[5][2];
+                randomBoard[5][2] = temp;
+            }
+            else if (endLocation.equals("18"))
+            {
+                temp = randomBoard[4][3];
+                randomBoard[4][3] = randomBoard[5][2];
+                randomBoard[5][2] = temp;
+            }
+            if (endLocation.equals("25"))
+            {
+                temp = randomBoard[6][1];
+                randomBoard[6][1] = randomBoard[5][2];
+                randomBoard[5][2] = temp;
+            }
+            else if (endLocation.equals("26"))
+            {
+                temp = randomBoard[6][3];
+                randomBoard[6][3] = randomBoard[5][2];
+                randomBoard[5][2] = temp;
+            }
+        }
 
+        if (originalLocation.equals("23"))
+        {
+            if (endLocation.equals("18"))
+            {
+                temp = randomBoard[4][3];
+                randomBoard[4][3] = randomBoard[5][4];
+                randomBoard[5][4] = temp;
+            }
+            else if (endLocation.equals("19"))
+            {
+                temp = randomBoard[4][5];
+                randomBoard[4][5] = randomBoard[5][4];
+                randomBoard[5][4] = temp;
+            }
+            else if (endLocation.equals("26"))
+            {
+                temp = randomBoard[6][3];
+                randomBoard[6][3] = randomBoard[5][4];
+                randomBoard[5][4] = temp;
+            }
+            else if (endLocation.equals("27"))
+            {
+                temp = randomBoard[6][5];
+                randomBoard[6][5] = randomBoard[5][4];
+                randomBoard[5][4] = temp;
+            }
+        }
+        
+        if (originalLocation.equals("24"))
+        {
+            if (endLocation.equals("19"))
+            {
+                temp = randomBoard[4][5];
+                randomBoard[4][5] = randomBoard[5][6];
+                randomBoard[5][6] = temp;
+            }
+            else if (endLocation.equals("20"))
+            {
+                temp = randomBoard[4][7];
+                randomBoard[4][7] = randomBoard[5][6];
+                randomBoard[5][6] = temp;
+            }
+            else if (endLocation.equals("27"))
+            {
+                temp = randomBoard[6][5];
+                randomBoard[6][5] = randomBoard[5][6];
+                randomBoard[5][6] = temp;
+            }
+            else if (endLocation.equals("28"))
+            {
+                temp = randomBoard[6][7];
+                randomBoard[6][7] = randomBoard[5][6];
+                randomBoard[5][6] = temp;
+            }
+        }
+
+        if (originalLocation.equals("25"))
+        {
+            if (endLocation.equals("21"))
+            {
+                temp = randomBoard[5][0];
+                randomBoard[5][0] = randomBoard[6][1];
+                randomBoard[6][1] = temp;
+            }
+            else if (endLocation.equals("22"))
+            {
+                temp = randomBoard[5][2];
+                randomBoard[5][2] = randomBoard[6][1];
+                randomBoard[6][1] = temp;
+            }
+            else if (endLocation.equals("29"))
+            {
+                temp = randomBoard[7][0];
+                randomBoard[7][0] = randomBoard[6][1];
+                randomBoard[6][1] = temp;
+            }
+            else if (endLocation.equals("30"))
+            {
+                temp = randomBoard[7][2];
+                randomBoard[7][2] = randomBoard[6][1];
+                randomBoard[6][1] = temp;
+            }
+        }
+        
+        if (originalLocation.equals("26"))
+        {
+            if (endLocation.equals("22"))
+            {
+                temp = randomBoard[5][2];
+                randomBoard[5][2] = randomBoard[6][3];
+                randomBoard[6][3] = temp;
+            }
+            else if (endLocation.equals("23"))
+            {
+                temp = randomBoard[5][4];
+                randomBoard[5][4] = randomBoard[6][3];
+                randomBoard[6][3] = temp;
+            }
+            if (endLocation.equals("30"))
+            {
+                temp = randomBoard[7][2];
+                randomBoard[7][2] = randomBoard[6][3];
+                randomBoard[6][3] = temp;
+            }
+            else if (endLocation.equals("31"))
+            {
+                temp = randomBoard[7][4];
+                randomBoard[7][4] = randomBoard[6][3];
+                randomBoard[6][3] = temp;
+            }
+        }
+
+        if (originalLocation.equals("27"))
+        {
+            if (endLocation.equals("23"))
+            {
+                temp = randomBoard[5][4];
+                randomBoard[5][4] = randomBoard[6][5];
+                randomBoard[6][5] = temp;
+            }
+            else if (endLocation.equals("24"))
+            {
+                temp = randomBoard[5][6];
+                randomBoard[5][6] = randomBoard[6][5];
+                randomBoard[6][5] = temp;
+            }
+            else if (endLocation.equals("31"))
+            {
+                temp = randomBoard[7][4];
+                randomBoard[7][4] = randomBoard[6][5];
+                randomBoard[6][5] = temp;
+            }
+            else if (endLocation.equals("32"))
+            {
+                temp = randomBoard[7][6];
+                randomBoard[7][6] = randomBoard[6][5];
+                randomBoard[6][5] = temp;
+            }
+        }
+        
+        if (originalLocation.equals("28"))
+        {
+            if (endLocation.equals("24"))
+            {
+                temp = randomBoard[5][6];
+                randomBoard[5][6] = randomBoard[6][7];
+                randomBoard[6][7] = temp;
+            }
+            else if (endLocation.equals("32"))
+            {
+                temp = randomBoard[7][6];
+                randomBoard[7][6] = randomBoard[6][7];
+                randomBoard[6][7] = temp;
+            }
+        }
+
+        if (originalLocation.equals("29") && endLocation.equals("25"))
+        {
+                temp = randomBoard[6][1];
+                randomBoard[6][1] = randomBoard[7][0];
+                randomBoard[7][0] = temp;
+        }
+
+        if (originalLocation.equals("30"))
+        {
+            if (endLocation.equals("25"))
+            {
+                temp = randomBoard[6][1];
+                randomBoard[6][1] = randomBoard[7][2];
+                randomBoard[7][2] = temp;
+            }
+            else if (endLocation.equals("26"))
+            {
+                temp = randomBoard[6][3];
+                randomBoard[6][3] = randomBoard[7][2];
+                randomBoard[7][2] = temp;
+            }
+        }
+
+        if (originalLocation.equals("31"))
+        {
+            if (endLocation.equals("26"))
+            {
+                temp = randomBoard[6][3];
+                randomBoard[6][3] = randomBoard[7][4];
+                randomBoard[7][4] = temp;
+            }
+            else if (endLocation.equals("27"))
+            {
+                temp = randomBoard[6][5];
+                randomBoard[6][5] = randomBoard[7][4];
+                randomBoard[7][4] = temp;
+            }
+        }
+        
+        if (originalLocation.equals("32"))
+        {
+            if (endLocation.equals("27"))
+            {
+                temp = randomBoard[6][5];
+                randomBoard[6][5] = randomBoard[7][6];
+                randomBoard[7][6] = temp;
+            }
+            else if (endLocation.equals("28"))
+            {
+                temp = randomBoard[6][7];
+                randomBoard[6][7] = randomBoard[7][6];
+                randomBoard[7][6] = temp;
+            }
+        }
 
         for (row = 0; row < 8; row++)
         {
@@ -611,8 +854,6 @@ public class Feature_Test {
                 board[randomRow][randomColumn] = "B";
             }
         }
-
-
 
         for (row = 0; row < 8; row++) {
             for (column = 0; column < 8; column++) {
@@ -777,4 +1018,4 @@ public class Feature_Test {
     }
 }
 
-//
+
