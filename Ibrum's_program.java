@@ -1,11 +1,14 @@
-package checkerProgram;
-
+package FINAL_PROJECT_BHATIA;
+import FINAL_PROJECT_BHATIA.newgame;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-
+/**
+ *
+ * @author sushil
+ */
 public class Feature_Test {
-
+    
     public static int row;
     public static int column;
     public static int randomRow;
@@ -17,14 +20,10 @@ public class Feature_Test {
     public static String [][] randomJumpBoard;
     public static String [][] board = new String[8][8];
 
-    public static void finalStandardOutput()
-    {
-
-    }
-    public static void finalJumpOutput()
-    {
-
-    }
+//    public static void PlainBoard()
+//    {
+//        
+//    }
     public static void finalStandardRandomBoard(String move)
     {
         int cut = move.indexOf("-");
@@ -1096,66 +1095,9 @@ public class Feature_Test {
         {
             case "1":
             {
-                System.out.println("You have chosen to start a New Game");
-                System.out.println("Your New Game will start now \n");
-
-                System.out.println("Please enter the color of the pieces that you would like to play with: \n" +
-                        "B : Black pieces \n" +
-                        "W : White pieces");
-                String userColor = input.nextLine();
-
-                String toLowerCase = userColor.toLowerCase();
-
-                if (userColor.equals("B") || userColor.equals("b") || userColor.equals("W") || userColor.equals("w") || userColor.contains("White") || userColor.contains("Black") || userColor.contains("white") || userColor.contains("black"))
-                {
-                   /* System.out.println("Would you like a reference board: \n" +
-                            "Y : Yes \n" +
-                            "N : No");
-                    String refBoardChoice = input.nextLine();
-
-                    if (refBoardChoice.contains("Y") || refBoardChoice.contains("y"))
-                    {
-                        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
-                        System.out.println("You will continue with the game with a reference board");
-                        System.out.println(removingExtras);
-                        System.out.println("\n");
-                    }
-                    else if (refBoardChoice.contains("N") || refBoardChoice.contains("n"))
-                    {
-                        System.out.println("You will continue with the game without a reference board");
-                    }
-                    */
-                    System.out.println("This the board before doing any moves");
-                    //plainStandardBoard = plainBoard();
-
-                    System.out.println("How many moves would you like to make in total ?");
-                    int movesTotal = input.nextInt();
-
-                    for (int i = 0; i < movesTotal; i++)
-                    {
-                        input = new Scanner(System.in);
-                        System.out.println("Please enter your move: ");
-                        String move = input.nextLine();
-
-                        if (move.contains("-"))
-                        {
-                            System.out.println("You have chosen to make a standard move");
-                            //finalPlainBoard();
-                            break;
-                        }
-                        else if (move.contains("x"))
-                        {
-                            System.out.println("You have chosen to make a jump move");
-                            //finalPlainBoard();
-                            break;
-                        }
-                    }
-                }
-                else
-                {
-                    System.out.println("Sorry you have chosen a color that does not exist");
-                    break;
-                }
+                newgame game=new newgame();
+                game.PlainBoard();
+                break;
             }
 
             case "2":
@@ -1171,23 +1113,6 @@ public class Feature_Test {
 
                 if (userColor.equals("B") || userColor.equals("b") || userColor.equals("W") || userColor.equals("w") || userColor.contains("White") || userColor.contains("Black") || userColor.contains("white") || userColor.contains("black"))
                 {
-                   /* System.out.println("Would you like a reference board: \n" +
-                            "Y : Yes \n" +
-                            "N : No");
-                    String refBoardChoice = input.nextLine();
-
-                    if (refBoardChoice.contains("Y") || refBoardChoice.contains("y"))
-                    {
-                        String removingExtras = (Arrays.deepToString(referenceBoard).replaceAll("(^\\[|\\]$)", "").replace(",", ""));
-                        System.out.println("You will continue with the game with a reference board");
-                        System.out.println(removingExtras);
-                        System.out.println("\n");
-                    }
-                    else if (refBoardChoice.contains("N") || refBoardChoice.contains("n"))
-                    {
-                        System.out.println("You will continue with the game without a reference board");
-                    }
-                    */
 
                     System.out.println("This the board before doing any moves");
                     randomBoard = randomizedBoard();
@@ -1280,5 +1205,3 @@ public class Feature_Test {
         }
     }
 }
-
-
