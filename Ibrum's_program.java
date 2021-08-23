@@ -1138,6 +1138,232 @@ public class Feature_Test {
                 randomJumpBoard[5][6] = randomJumpBoard[4][5];
             }
         }
+            if (originalLocation.equals("20"))
+        {
+            if (endLocation.equals("11") && randomJumpBoard[2][5].contains("."))
+            {
+                temp = randomJumpBoard[2][5];
+                randomJumpBoard[2][5] = randomJumpBoard[4][7];
+                randomJumpBoard[4][7] = temp;
+                randomJumpBoard[4][1] = randomJumpBoard[4][7];
+            }
+            else if (endLocation.equals("27") && randomJumpBoard[6][5].contains("."))
+            {
+            	temp = randomJumpBoard[6][5];
+                randomJumpBoard[6][5] = randomJumpBoard[4][7];
+                randomJumpBoard[4][7] = temp;
+                randomJumpBoard[5][6] = randomJumpBoard[4][7];
+        }
+        }
+        if (originalLocation.equals("21"))
+        {
+            if (endLocation.equals("14") && randomJumpBoard[3][2].contains("."))
+            {
+                temp = randomJumpBoard[3][2];
+                randomJumpBoard[3][2] = randomJumpBoard[5][0];
+                randomJumpBoard[5][0] = temp;
+                randomJumpBoard[4][1] = randomJumpBoard[5][0];
+            }
+            else if (endLocation.equals("30") && randomJumpBoard[7][2].contains("."))
+            {
+            	temp = randomJumpBoard[7][2];
+                randomJumpBoard[7][2] = randomJumpBoard[5][0];
+                randomJumpBoard[5][0] = temp;
+                randomJumpBoard[6][1] = randomJumpBoard[5][0];
+        }
+        }
+        if (originalLocation.equals("22"))
+        {
+            if (endLocation.equals("15") && randomJumpBoard[3][4].contains("."))
+            {
+                temp = randomJumpBoard[3][4];
+                randomJumpBoard[3][4] = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = temp;
+                randomJumpBoard[4][3] = randomJumpBoard[5][2];
+            }
+            else if (endLocation.equals("13") && randomJumpBoard[3][0].contains("."))
+            {
+            	temp = randomJumpBoard[3][0];
+                randomJumpBoard[3][0] = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = temp;
+                randomJumpBoard[4][1] = randomJumpBoard[5][2];
+        }
+            else if (endLocation.equals("31") && randomJumpBoard[7][4].contains("."))
+            {
+            	temp = randomJumpBoard[7][4];
+                randomJumpBoard[7][4] = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = temp;
+                randomJumpBoard[6][3] = randomJumpBoard[5][2];
+        }
+            else if (endLocation.equals("29") && randomJumpBoard[7][0].contains("."))
+            {
+            	temp = randomJumpBoard[7][0];
+                randomJumpBoard[7][0] = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = temp;
+                randomJumpBoard[6][1] = randomJumpBoard[5][2];
+        }
+        }
+        if (originalLocation.equals("23"))
+        {
+            if (endLocation.equals("16") && randomJumpBoard[3][6].contains("."))
+            {
+                temp = randomJumpBoard[3][6];
+                randomJumpBoard[3][6] = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = temp;
+                randomJumpBoard[4][5] = randomJumpBoard[5][4];
+            }
+            else if (endLocation.equals("14") && randomJumpBoard[3][2].contains("."))
+            {
+            	temp = randomJumpBoard[3][2];
+                randomJumpBoard[3][2] = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = temp;
+                randomJumpBoard[4][3] = randomJumpBoard[5][4];
+        }
+            else if (endLocation.equals("32") && randomJumpBoard[7][6].contains("."))
+            {
+            	temp = randomJumpBoard[7][6];
+                randomJumpBoard[7][6] = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = temp;
+                randomJumpBoard[6][5] = randomJumpBoard[5][4];
+        }
+            else if (endLocation.equals("30") && randomJumpBoard[7][2].contains("."))
+            {
+            	temp = randomJumpBoard[7][2];
+                randomJumpBoard[7][2] = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = temp;
+                randomJumpBoard[6][3] = randomJumpBoard[5][4];
+        }
+        }
+        if (originalLocation.equals("24"))
+        {
+            if (endLocation.equals("15") && randomJumpBoard[3][4].contains("."))
+            {
+                temp = randomJumpBoard[3][4];
+                randomJumpBoard[3][4] = randomJumpBoard[5][6];
+                randomJumpBoard[5][6] = temp;
+                randomJumpBoard[4][5] = randomJumpBoard[5][6];
+            }
+            else if (endLocation.equals("31") && randomJumpBoard[7][4].contains("."))
+            {
+            	temp = randomJumpBoard[7][4];
+                randomJumpBoard[7][4] = randomJumpBoard[5][6];
+                randomJumpBoard[5][6] = temp;
+                randomJumpBoard[6][5] = randomJumpBoard[5][6];
+        }
+        }
+        if (originalLocation.equals("25"))
+        {
+            if (endLocation.equals("18") && randomJumpBoard[4][3].contains("."))
+            {
+                temp = randomJumpBoard[4][3];
+                randomJumpBoard[4][3] = randomJumpBoard[6][1];
+                randomJumpBoard[6][1] = temp;
+                randomJumpBoard[5][2] = randomJumpBoard[6][1];
+            }
+            
+        }
+        if (originalLocation.equals("26"))
+        {
+            if (endLocation.equals("19") && randomJumpBoard[4][5].contains("."))
+            {
+                temp = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = randomJumpBoard[6][3];
+                randomJumpBoard[6][3] = temp;
+                randomJumpBoard[5][4] = randomJumpBoard[6][3];
+            }
+            else if (endLocation.equals("17") && randomJumpBoard[4][1].contains("."))
+            {
+            	temp = randomJumpBoard[4][1];
+                randomJumpBoard[4][1] = randomJumpBoard[6][3];
+                randomJumpBoard[6][3] = temp;
+                randomJumpBoard[5][2] = randomJumpBoard[6][3];
+        }
+        }
+        if (originalLocation.equals("27"))
+        {
+            if (endLocation.equals("18") && randomJumpBoard[4][3].contains("."))
+            {
+                temp = randomJumpBoard[4][3];
+                randomJumpBoard[4][3] = randomJumpBoard[6][5];
+                randomJumpBoard[6][5] = temp;
+                randomJumpBoard[5][4] = randomJumpBoard[6][5];
+            }
+            else if (endLocation.equals("20") && randomJumpBoard[4][7].contains("."))
+            {
+            	temp = randomJumpBoard[4][7];
+                randomJumpBoard[4][7] = randomJumpBoard[6][5];
+                randomJumpBoard[6][5] = temp;
+                randomJumpBoard[5][6] = randomJumpBoard[6][5];
+        }
+        }
+
+        if (originalLocation.equals("28"))
+        {
+            if (endLocation.equals("19") && randomJumpBoard[4][5].contains("."))
+            {
+                temp = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = randomJumpBoard[6][7];
+                randomJumpBoard[6][7] = temp;
+                randomJumpBoard[5][6] = randomJumpBoard[6][7];
+            }
+            
+        }
+        if (originalLocation.equals("29"))
+        {
+            if (endLocation.equals("22") && randomJumpBoard[5][2].contains("."))
+            {
+                temp = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = randomJumpBoard[7][2];
+                randomJumpBoard[7][2] = temp;
+                randomJumpBoard[6][1] = randomJumpBoard[7][2];
+            }
+            
+        }
+        if (originalLocation.equals("30"))
+        {
+            if (endLocation.equals("21") && randomJumpBoard[5][0].contains("."))
+            {
+                temp = randomJumpBoard[5][0];
+                randomJumpBoard[5][0] = randomJumpBoard[7][2];
+                randomJumpBoard[7][2] = temp;
+                randomJumpBoard[6][1] = randomJumpBoard[7][2];
+            }
+            else if (endLocation.equals("23") && randomJumpBoard[5][4].contains("."))
+            {
+            	temp = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = randomJumpBoard[7][2];
+                randomJumpBoard[7][2] = temp;
+                randomJumpBoard[6][3] = randomJumpBoard[7][2];
+        }
+        }
+        if (originalLocation.equals("31"))
+        {
+            if (endLocation.equals("24") && randomJumpBoard[5][6].contains("."))
+            {
+                temp = randomJumpBoard[5][6];
+                randomJumpBoard[5][6] = randomJumpBoard[7][4];
+                randomJumpBoard[7][4] = temp;
+                randomJumpBoard[6][5] = randomJumpBoard[7][4];
+            }
+            else if (endLocation.equals("22") && randomJumpBoard[5][2].contains("."))
+            {
+            	temp = randomJumpBoard[5][4];
+                randomJumpBoard[5][2] = randomJumpBoard[7][4];
+                randomJumpBoard[7][4] = temp;
+                randomJumpBoard[6][3] = randomJumpBoard[7][4];
+        }
+        }
+        
+        if (originalLocation.equals("32"))
+        {
+            if (endLocation.equals("23") && randomJumpBoard[5][4].contains("."))
+            {
+                temp = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = randomJumpBoard[7][6];
+                randomJumpBoard[7][6] = temp;
+                randomJumpBoard[6][5] = randomJumpBoard[7][6];
+            }
+        }
 
         for (row = 0; row < 8; row++)
         {
