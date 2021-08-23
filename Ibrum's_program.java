@@ -15,6 +15,14 @@ public class Feature_Test {
     public static Scanner input = new Scanner(System.in);
     public static String [][] randomJumpBoard;
 
+    public static void finalStandardOutput()
+    {
+
+    }
+    public static void finalJumpOutput()
+    {
+        
+    }
     public static void finalStandardRandomBoard(String move)
     {
         int cut = move.indexOf("-");
@@ -52,7 +60,6 @@ public class Feature_Test {
                 randomBoard[0][3] = temp;
             }
         }
-        
         if (originalLocation.equals("3"))
         {
             if (endLocation.equals("7"))
@@ -119,7 +126,6 @@ public class Feature_Test {
                 randomBoard[1][2] = temp;
             }
         }
-        
         if (originalLocation.equals("7"))
         {
             if (endLocation.equals("10"))
@@ -175,7 +181,6 @@ public class Feature_Test {
                 randomBoard[1][6] = temp;
             }
         }
-        
         if (originalLocation.equals("9"))
         {
             if (endLocation.equals("13"))
@@ -231,7 +236,6 @@ public class Feature_Test {
                 randomBoard[2][3] = temp;
             }
         }
-        
         if (originalLocation.equals("11"))
         {
             if (endLocation.equals("15"))
@@ -288,7 +292,7 @@ public class Feature_Test {
             {
                 temp = randomBoard[4][1];
                 randomBoard[4][1] = randomBoard[3][0];
-                randomBoard[1][0] = temp;
+                randomBoard[3][0] = temp;
             }
         }
 
@@ -319,7 +323,6 @@ public class Feature_Test {
                 randomBoard[3][2] = temp;
             }
         }
-        
         if (originalLocation.equals("15"))
         {
             if (endLocation.equals("18"))
@@ -328,7 +331,7 @@ public class Feature_Test {
                 randomBoard[4][3] = randomBoard[3][4];
                 randomBoard[3][4] = temp;
             }
-            else if (endLocation.equals("18"))
+            else if (endLocation.equals("19"))
             {
                 temp = randomBoard[4][5];
                 randomBoard[4][5] = randomBoard[3][4];
@@ -431,7 +434,6 @@ public class Feature_Test {
                 randomBoard[4][3] = temp;
             }
         }
-        
         if (originalLocation.equals("19"))
         {
             if (endLocation.equals("15"))
@@ -547,7 +549,6 @@ public class Feature_Test {
                 randomBoard[5][4] = temp;
             }
         }
-        
         if (originalLocation.equals("24"))
         {
             if (endLocation.equals("19"))
@@ -603,7 +604,6 @@ public class Feature_Test {
                 randomBoard[6][1] = temp;
             }
         }
-        
         if (originalLocation.equals("26"))
         {
             if (endLocation.equals("22"))
@@ -659,7 +659,6 @@ public class Feature_Test {
                 randomBoard[6][5] = temp;
             }
         }
-        
         if (originalLocation.equals("28"))
         {
             if (endLocation.equals("24"))
@@ -714,7 +713,6 @@ public class Feature_Test {
                 randomBoard[7][4] = temp;
             }
         }
-        
         if (originalLocation.equals("32"))
         {
             if (endLocation.equals("27"))
@@ -743,8 +741,56 @@ public class Feature_Test {
 
     public static void finalJumpRandomBoard(String move)
     {
-        System.out.println("This the board before doing any moves");
-        randomJumpBoard = randomizedBoard();
+        randomJumpBoard = randomBoard;
+
+        int cut = move.indexOf("x");
+        String originalLocation = move.substring(0, cut);
+        String endLocation = move.substring(cut+1);
+
+        if (originalLocation.equals("1"))
+        {
+            if (endLocation.equals("10") && randomJumpBoard[2][3].contains("."))
+            {
+                temp = randomJumpBoard[2][3];
+                randomJumpBoard[2][3] = randomJumpBoard[0][1];
+                randomJumpBoard[0][1] = temp;
+                randomJumpBoard[1][2] = randomJumpBoard[0][1];
+            }
+        }
+
+        if (originalLocation.equals("2"))
+        {
+            if (endLocation.equals("9") && randomJumpBoard[2][1].contains("."))
+            {
+                temp = randomJumpBoard[2][1];
+                randomJumpBoard[2][1] = randomJumpBoard[0][3];
+                randomJumpBoard[0][3] = temp;
+                randomJumpBoard[1][2] = randomJumpBoard[0][3];
+            }
+            else if (endLocation.equals("11") && randomJumpBoard[2][5].contains("."))
+            {
+                temp = randomJumpBoard[2][5];
+                randomJumpBoard[2][5] = randomJumpBoard[0][3];
+                randomJumpBoard[0][3] = temp;
+                randomJumpBoard[1][4] = randomJumpBoard[0][3];
+            }
+        }
+        if (originalLocation.equals("3"))
+        {
+            if (endLocation.equals("7"))
+            {
+                temp = randomBoard[1][4];
+                randomBoard[1][4] = randomBoard[0][5];
+                randomBoard[0][5] = temp;
+            }
+            else if (endLocation.equals("8"))
+            {
+                temp = randomBoard[1][6];
+                randomBoard[1][6] = randomBoard[0][5];
+                randomBoard[0][5] = temp;
+            }
+        }
+
 
 
         for (row = 0; row < 8; row++)
@@ -756,7 +802,7 @@ public class Feature_Test {
             System.out.println();
         }
     }
-    public static void finalPlainBoard()
+    /*public static void finalPlainBoard()
     {
 
     }
@@ -806,7 +852,7 @@ public class Feature_Test {
         }
         return board;
     }
-
+     */
     public static String[][] randomizedBoard()
     {
         ThreadLocalRandom random = ThreadLocalRandom.current();
@@ -854,6 +900,8 @@ public class Feature_Test {
                 board[randomRow][randomColumn] = "B";
             }
         }
+
+
 
         for (row = 0; row < 8; row++) {
             for (column = 0; column < 8; column++) {
@@ -909,7 +957,7 @@ public class Feature_Test {
                     }
                     */
                     System.out.println("This the board before doing any moves");
-                    plainStandardBoard = plainBoard();
+                    //plainStandardBoard = plainBoard();
 
                     System.out.println("How many moves would you like to make in total ?");
                     int movesTotal = input.nextInt();
@@ -923,13 +971,13 @@ public class Feature_Test {
                         if (move.contains("-"))
                         {
                             System.out.println("You have chosen to make a standard move");
-                            finalPlainBoard();
+                            //finalPlainBoard();
                             break;
                         }
                         else if (move.contains("x"))
                         {
                             System.out.println("You have chosen to make a jump move");
-                            finalPlainBoard();
+                            //finalPlainBoard();
                             break;
                         }
                     }
@@ -971,31 +1019,76 @@ public class Feature_Test {
                         System.out.println("You will continue with the game without a reference board");
                     }
                     */
+
                     System.out.println("This the board before doing any moves");
                     randomBoard = randomizedBoard();
 
                     System.out.println("How many moves would you like to make in total ?");
                     int movesTotal = input.nextInt();
 
-                    for (int i = 0; i < movesTotal; i++)
-                    {
-                        input = new Scanner(System.in);
-                        System.out.println("Please enter your move: ");
-                        String move = input.nextLine();
+                    input = new Scanner(System.in);
+                    System.out.println("Please enter your move: ");
+                    String move = input.nextLine();
 
-                        if (move.contains("-"))
+                    if (move.contains("-"))
+                    {
+                        System.out.println("You have chosen to make a standard move");
+
+                        for (int i = 0; i < movesTotal; i++)
                         {
-                            System.out.println("You have chosen to make a standard move");
-                            finalStandardRandomBoard(move);
-                            break;
+                            if (i == 0)
+                            {
+                                finalStandardRandomBoard(move);
+                            }
+                            else if (i > 0)
+                            {
+                                input = new Scanner(System.in);
+                                System.out.println("Please enter your move: ");
+                                move = input.nextLine();
+                                finalStandardRandomBoard(move);
+                            }
+                            else if (move.contains("x") && i == 0)
+                            {
+                                finalJumpRandomBoard(move);
+                            }
+                            else if (move.contains("x") && i > 0)
+                            {
+                                input = new Scanner(System.in);
+                                System.out.println("Please enter your move: ");
+                                move = input.nextLine();
+                                finalJumpRandomBoard(move);
+                            }
                         }
-                        else if (move.contains("x"))
+                    }
+                    else if (move.contains("x"))
+                    {
+                        System.out.println("You have chosen to make a jump move");
+
+                        for (int i = 0; i < movesTotal; i++)
                         {
-                            System.out.println("You have chosen to make a jump move");
-                            finalJumpRandomBoard(move);
-                            break;
+                            if (i == 0)
+                            {
+                                finalJumpRandomBoard(move);
+                            }
+                            else if (i > 0)
+                            {
+                                input = new Scanner(System.in);
+                                System.out.println("Please enter your move: ");
+                                move = input.nextLine();
+                                finalJumpRandomBoard(move);
+                            }
+                            else if (move.contains("-") && i == 0)
+                            {
+                                finalStandardRandomBoard(move);
+                            }
+                            else if (move.contains("-") && i > 0)
+                            {
+                                input = new Scanner(System.in);
+                                System.out.println("Please enter your move: ");
+                                move = input.nextLine();
+                                finalStandardRandomBoard(move);
+                            }
                         }
-                        break;
                     }
                 }
                 else
@@ -1003,6 +1096,7 @@ public class Feature_Test {
                     System.out.println("Sorry you have chosen a color that does not exist");
                     break;
                 }
+                break;
             }
             case "3":
             {
