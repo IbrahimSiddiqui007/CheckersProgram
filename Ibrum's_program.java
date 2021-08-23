@@ -3,10 +3,7 @@ import FINAL_PROJECT_BHATIA.newgame;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-/**
- *
- * @author sushil
- */
+
 public class Feature_Test {
     
     public static int row;
@@ -20,10 +17,6 @@ public class Feature_Test {
     public static String [][] randomJumpBoard;
     public static String [][] board = new String[8][8];
 
-//    public static void PlainBoard()
-//    {
-//        
-//    }
     public static void finalStandardRandomBoard(String move)
     {
         int cut = move.indexOf("-");
@@ -937,10 +930,10 @@ public class Feature_Test {
                 randomJumpBoard[2][5] = temp;
                 randomJumpBoard[3][4] = randomJumpBoard[2][5];
             }
-            else if (endLocation.equals("20") && randomJumpBoard[4][5].contains("."))
+            else if (endLocation.equals("20") && randomJumpBoard[4][7].contains("."))
             {
-                temp = randomJumpBoard[4][5];
-                randomJumpBoard[4][5] = randomJumpBoard[2][5];
+                temp = randomJumpBoard[4][7];
+                randomJumpBoard[4][7] = randomJumpBoard[2][5];
                 randomJumpBoard[2][5] = temp;
                 randomJumpBoard[3][6] = randomJumpBoard[2][5];
             }
@@ -957,12 +950,195 @@ public class Feature_Test {
             }
             else if (endLocation.equals("19") && randomJumpBoard[4][5].contains("."))
             {
-                temp = randomJumpBoard[3][5];
-                randomJumpBoard[3][5] = randomJumpBoard[2][7];
+                temp = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = randomJumpBoard[2][7];
                 randomJumpBoard[2][7] = temp;
                 randomJumpBoard[3][6] = randomJumpBoard[2][7];
             }
         }
+
+        if (originalLocation.equals("13"))
+        {
+            if (endLocation.equals("6") && randomJumpBoard[1][2].contains("."))
+            {
+                temp = randomJumpBoard[1][2];
+                randomJumpBoard[1][2] = randomJumpBoard[3][0];
+                randomJumpBoard[3][0] = temp;
+                randomJumpBoard[2][1] = randomJumpBoard[3][0];
+            }
+            else if (endLocation.equals("22") && randomJumpBoard[5][2].contains("."))
+            {
+                temp = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = randomJumpBoard[3][0];
+                randomJumpBoard[3][0] = temp;
+                randomJumpBoard[4][1] = randomJumpBoard[3][0];
+            }
+        }
+
+        if (originalLocation.equals("14"))
+        {
+            if (endLocation.equals("5") && randomJumpBoard[1][0].contains("."))
+            {
+                temp = randomJumpBoard[1][0];
+                randomJumpBoard[1][0] = randomJumpBoard[3][2];
+                randomJumpBoard[3][2] = temp;
+                randomJumpBoard[2][1] = randomJumpBoard[3][2];
+            }
+            else if (endLocation.equals("7") && randomJumpBoard[1][4].contains("."))
+            {
+                temp = randomJumpBoard[1][4];
+                randomJumpBoard[1][4] = randomJumpBoard[3][2];
+                randomJumpBoard[3][2] = temp;
+                randomJumpBoard[2][3] = randomJumpBoard[3][2];
+            }
+            else if (endLocation.equals("21") && randomJumpBoard[5][0].contains("."))
+            {
+                temp = randomJumpBoard[5][0];
+                randomJumpBoard[5][0] = randomJumpBoard[3][2];
+                randomJumpBoard[3][2] = temp;
+                randomJumpBoard[4][1] = randomJumpBoard[3][2];
+            }
+            else if (endLocation.equals("23") && randomJumpBoard[5][4].contains("."))
+            {
+                temp = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = randomJumpBoard[3][2];
+                randomJumpBoard[3][2] = temp;
+                randomJumpBoard[4][3] = randomJumpBoard[3][2];
+            }
+        }
+
+        if (originalLocation.equals("15"))
+        {
+            if (endLocation.equals("6") && randomJumpBoard[1][2].contains("."))
+            {
+                temp = randomJumpBoard[1][2];
+                randomJumpBoard[1][2] = randomJumpBoard[3][4];
+                randomJumpBoard[3][4] = temp;
+                randomJumpBoard[2][3] = randomJumpBoard[3][4];
+            }
+            else if (endLocation.equals("8") && randomJumpBoard[1][6].contains("."))
+            {
+                temp = randomJumpBoard[1][6];
+                randomJumpBoard[1][6] = randomJumpBoard[3][4];
+                randomJumpBoard[3][4] = temp;
+                randomJumpBoard[2][5] = randomJumpBoard[3][4];
+            }
+            else if (endLocation.equals("21") && randomJumpBoard[5][2].contains("."))
+            {
+                temp = randomJumpBoard[5][2];
+                randomJumpBoard[5][2] = randomJumpBoard[3][4];
+                randomJumpBoard[3][4] = temp;
+                randomJumpBoard[4][3] = randomJumpBoard[3][4];
+            }
+            else if (endLocation.equals("24") && randomJumpBoard[5][6].contains("."))
+            {
+                temp = randomJumpBoard[5][6];
+                randomJumpBoard[5][6] = randomJumpBoard[3][4];
+                randomJumpBoard[3][4] = temp;
+                randomJumpBoard[4][5] = randomJumpBoard[3][4];
+            }
+        }
+
+        if (originalLocation.equals("16"))
+        {
+            if (endLocation.equals("7") && randomJumpBoard[1][4].contains("."))
+            {
+                temp = randomJumpBoard[1][4];
+                randomJumpBoard[1][4] = randomJumpBoard[3][6];
+                randomJumpBoard[3][6] = temp;
+                randomJumpBoard[2][5] = randomJumpBoard[3][6];
+            }
+            else if (endLocation.equals("23") && randomJumpBoard[5][4].contains("."))
+            {
+                temp = randomJumpBoard[5][4];
+                randomJumpBoard[5][4] = randomJumpBoard[3][6];
+                randomJumpBoard[3][6] = temp;
+                randomJumpBoard[4][5] = randomJumpBoard[3][6];
+            }
+        }
+
+        if (originalLocation.equals("17"))
+        {
+            if (endLocation.equals("10") && randomJumpBoard[2][3].contains("."))
+            {
+                temp = randomJumpBoard[2][3];
+                randomJumpBoard[2][3] = randomJumpBoard[4][1];
+                randomJumpBoard[4][1] = temp;
+                randomJumpBoard[3][2] = randomJumpBoard[4][1];
+            }
+            else if (endLocation.equals("26") && randomJumpBoard[6][3].contains("."))
+            {
+                temp = randomJumpBoard[6][3];
+                randomJumpBoard[6][3] = randomJumpBoard[4][1];
+                randomJumpBoard[4][1] = temp;
+                randomJumpBoard[5][2] = randomJumpBoard[4][1];
+            }
+        }
+
+        if (originalLocation.equals("18"))
+        {
+            if (endLocation.equals("10") && randomJumpBoard[2][3].contains("."))
+            {
+                temp = randomJumpBoard[2][3];
+                randomJumpBoard[2][3] = randomJumpBoard[4][3];
+                randomJumpBoard[4][3] = temp;
+                randomJumpBoard[3][2] = randomJumpBoard[4][3];
+            }
+            else if (endLocation.equals("11") && randomJumpBoard[2][5].contains("."))
+            {
+                temp = randomJumpBoard[2][5];
+                randomJumpBoard[2][5] = randomJumpBoard[4][3];
+                randomJumpBoard[4][3] = temp;
+                randomJumpBoard[3][4] = randomJumpBoard[4][3];
+            }
+            else if (endLocation.equals("25") && randomJumpBoard[6][1].contains("."))
+            {
+                temp = randomJumpBoard[6][1];
+                randomJumpBoard[6][1] = randomJumpBoard[4][3];
+                randomJumpBoard[4][3] = temp;
+                randomJumpBoard[5][2] = randomJumpBoard[4][3];
+            }
+            else if (endLocation.equals("27") && randomJumpBoard[6][5].contains("."))
+            {
+                temp = randomJumpBoard[6][5];
+                randomJumpBoard[6][5] = randomJumpBoard[4][3];
+                randomJumpBoard[4][3] = temp;
+                randomJumpBoard[5][4] = randomJumpBoard[4][3];
+            }
+        }
+
+        if (originalLocation.equals("19"))
+        {
+            if (endLocation.equals("10") && randomJumpBoard[2][3].contains("."))
+            {
+                temp = randomJumpBoard[2][3];
+                randomJumpBoard[2][3] = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = temp;
+                randomJumpBoard[3][4] = randomJumpBoard[4][5];
+            }
+            else if (endLocation.equals("12") && randomJumpBoard[2][7].contains("."))
+            {
+                temp = randomJumpBoard[2][7];
+                randomJumpBoard[2][7] = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = temp;
+                randomJumpBoard[3][6] = randomJumpBoard[4][5];
+            }
+            else if (endLocation.equals("26") && randomJumpBoard[6][3].contains("."))
+            {
+                temp = randomJumpBoard[6][3];
+                randomJumpBoard[6][3] = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = temp;
+                randomJumpBoard[5][4] = randomJumpBoard[4][5];
+            }
+            else if (endLocation.equals("28") && randomJumpBoard[6][7].contains("."))
+            {
+                temp = randomJumpBoard[6][7];
+                randomJumpBoard[6][5] = randomJumpBoard[4][5];
+                randomJumpBoard[4][5] = temp;
+                randomJumpBoard[5][6] = randomJumpBoard[4][5];
+            }
+        }
+
         for (row = 0; row < 8; row++)
         {
             for (column = 0; column < 8; column++)
@@ -972,57 +1148,7 @@ public class Feature_Test {
             System.out.println();
         }
     }
-    /*public static void finalPlainBoard()
-    {
-
-    }
-    public static String[][] plainBoard()
-    {
-        System.out.println("");
-        for (row = 1; row < 3; row++)
-        {
-            for (column = 0; column < 8; column++)
-            {
-                board[row][column] = (row + column) % 2 == 0 ? "-" : "w";
-            }
-        }
-        for (row = 3; row <5; row++)
-        {
-            for (column = 0; column < 8; column++)
-            {
-                board[row][column] = (row + column) % 2 == 0 ? "-" : ".";
-            }
-        }
-        for (row = 5; row <7; row++)
-        {
-            for (column = 0; column < 8; column++)
-            {
-                board[row][column] = (row + column) % 2 == 0 ? "-" : "b";
-            }
-        }
-        for (row = 7; row <=7; row++)
-        {
-            for (column = 0; column < 8; column++)
-            {
-                board[row][column] = (row + column) % 2 == 0 ? "-" : "B";
-            }
-        }
-        for (row = 0; row <=0; row++)
-        {
-            for (column = 0; column < 8; column++)
-            {
-                board[row][column] = (row + column) % 2 == 0 ? "-" : "W";
-            }
-        }
-        for (row = 0; row < 8; row++) {
-            for (column = 0; column < 8; column++) {
-                System.out.print(board[row][column] + " ");
-            }
-            System.out.println();
-        }
-        return board;
-    }
-     */
+   
     public static String[][] randomizedBoard()
     {
         ThreadLocalRandom random = ThreadLocalRandom.current();
