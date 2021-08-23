@@ -1,5 +1,5 @@
-package FINAL_PROJECT_BHATIA;
-import FINAL_PROJECT_BHATIA.newgame;
+package CheckersProgram;
+import CheckersProgram.newgame;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
